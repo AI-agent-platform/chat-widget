@@ -20,13 +20,13 @@ const ChatWidget = () => {
     setInput('');
 
     try {
-      const res = await fetch('https://your-backend.com/chat', {
+      const res = await fetch('http://localhost:4001/chat', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ prompt: trimmed }),
+        body: JSON.stringify({ message: trimmed }),
       });
 
-      const data = await res.json();
+      const data = await res.json();      
       const botMsg = { sender: 'bot', text: data.response || 'No response' };
       setMessages((prev) => [...prev, botMsg]);
     } catch (err) {
