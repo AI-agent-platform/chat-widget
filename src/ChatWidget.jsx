@@ -38,7 +38,7 @@ const ChatWidget = () => {
       ]);
     }
   };
-
+//need to add file handling
   return (
     <div className="chat-widget-wrapper">
       {isOpen && (
