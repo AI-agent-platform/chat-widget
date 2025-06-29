@@ -18,7 +18,7 @@ const ChatWidget = () => {
     const userMsg = { sender: 'user', text: trimmed };
     setMessages((prev) => [...prev, userMsg]);
     setInput('');
-
+//need to change api endpoint
     try {
       const res = await fetch('http://localhost:4001/chat', {
         method: 'POST',
